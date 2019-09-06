@@ -1,0 +1,15 @@
+<div class="new-task-content">
+  <div class="child-section">
+    {{outlet}}
+  </div>
+
+  <div class="type-container">
+    {{#link-to "new-task.personal"}}
+      Personal
+    {{/link-to}}
+
+
+    {{#link-to "new-task.household" class="household"}}Household{{/link-to}}
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="household-header">
+  Create a task for the household
+</div>
+
+<div class="input-section">
+  {{input placeholder="Write a task name..." value=taskName}}
+</div>
+<div class="input-section">
+  {{textarea placeholder="Description..." rows=6 value=taskDescription}}
+</div>
+<div class="input-section">
+  <select>
+    <option value='daily'>Daily</option>
+    <option value='weekly'>Weekly</option>
+    <option value='monthly'>Monthly</option>
+    <option value='yearly'>Yearly</option>
+    <option value='custom'>Custom</option>
+  </select>
+</div>
+
+<div class="input-section">
+  {{input placeholder="Due date..." value=dueDate}}
+</div>
+
+<div class="input-section rotation dark">
+  <div class="prompt">
+    Should this task rotate between roommates?
+  </div>
+  <button {{action "promptAnswer" "rotation" "yes"}}>Yes</button>
+  <button {{action "promptAnswer" "rotation" "no"}}>No</button>
+</div>
+
+<div class="input-section personal dark">
+  <div class="prompt">
+    Can you do this task?
+  </div>
+  <button {{action "promptAnswer" "personal" "yes"}}>Yes</button>
+  <button {{action "promptAnswer" "personal" "no"}}>No</button>
+</div>
+
+{{#mdc-button click=(action "saveTask")}}Save{{/mdc-button}}

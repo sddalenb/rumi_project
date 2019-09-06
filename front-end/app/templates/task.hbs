@@ -1,0 +1,17 @@
+<div class="task-content">
+  <h3>{{model.title}}</h3>
+
+  <div class="description task">
+    <p>{{model.description}}</p>
+  </div>
+
+  <div class="description">
+    {{moment-format model.dateDue "MM/DD/YYYY"}}
+  </div>
+
+  {{rumi-comments-section comments=comments}}
+
+  <div class="text-field-row">
+    {{mdc-textfield label="Leave a comment..." style="fullWidth" id="comment" dense=false insert-newline=(action "enterComment")}}
+  </div>
+</div>

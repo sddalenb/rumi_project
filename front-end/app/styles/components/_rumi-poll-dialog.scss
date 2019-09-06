@@ -1,0 +1,50 @@
+// route: rumi-poll-dialog
+
+.rumi-poll-dialog {
+  .mdc-dialog{
+    .mdc-dialog__surface{
+      background: black;
+      .mdc-dialog__title{
+        font-family: 'Eczar',serif;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .mdc-dialog__button{
+        color: white;
+        font-family: 'Exo';
+      }
+
+      .mdc-dialog__content{
+        font-family: 'Exo';
+        color: white;
+        textarea {
+          -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+          box-sizing: border-box;         /* Opera/IE 8+ */
+          -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+          padding: 8px;
+          font-family: Exo;
+          width: 100%;
+        }
+      }
+    }
+
+    .container{
+      padding: 8px 10px;
+      background: white;
+      font-size: 14px;
+      font-family: 'Exo';
+      color: black;
+      margin-bottom: 16px;
+
+      &.description{
+        min-height: 150px;
+      }
+    }
+
+
+
+
+  }
+}

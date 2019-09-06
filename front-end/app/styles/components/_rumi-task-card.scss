@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+.rumi-task-card{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Exo', sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  padding: 16px 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  .circle{
+    width: 30pt;
+    height: 30pt;
+    border: 1pt solid #000000;
+    border-radius: 60%;
+    margin: 0 16px 0 8px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30pt;
+
+    i{
+      font-size: 16pt;
+      margin: 10px;
+    }
+
+    &.done {
+      background-color: #000000;
+      color: #F5F0F0;
+    }
+  }
+
+  .description{
+    max-width: 176px;
+    flex-direction: column;
+    .due-date{
+      font-size: 10px;
+      font-weight: normal;
+      color: #868585;
+    }
+  }
+}

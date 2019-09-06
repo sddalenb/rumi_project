@@ -1,0 +1,41 @@
+// route: calendar
+@import "ember-power-calendar";
+.route__calendar {
+  .calendar-header {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Eczar', serif;
+    font-weight: bold;
+    display: flex;
+    font-size: 22px;
+    margin: 8px;
+  }
+
+  .month-tasks{
+    h3{
+      text-align: center;
+      color: white;
+      font-family: 'Eczar', serif;
+      font-weight: bold;
+      font-size: 20pt;
+      margin: 0;
+    }
+    background: black;
+  }
+
+  .with-invisible-select {
+    position: relative;
+    select {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      opacity: 0;
+    }
+  }
+
+  .rumi-task-card{
+    .circle{
+      background: black;
+      color: #F5F0F0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="circle {{if task.taskCompleted "done"}}">
+  {{#if task.taskCompleted}}
+    {{mdc-icon "done"}}
+
+  {{else if calendarView}}
+    {{moment-format task.dateDue "D"}}
+  {{/if}}
+
+</div>
+
+<div class="description">
+  <div>{{task.title}}</div>
+  <div class="due-date">Due: <span class="date">{{moment-format task.dateDue "MM/DD/YYYY"}}</span></div>
+</div>

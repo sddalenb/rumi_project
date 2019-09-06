@@ -1,0 +1,11 @@
+{{rumi-filter-option rumi=(get rumis selectedRumi) color=(get colors (mod selectedRumi 5)) click=(action (mut isOpen) true)}}
+{{#if isOpen}}
+  {{#each rumis as |rumi index|}}
+    {{#if (not-eq index selectedRumi)}}
+      {{rumi-filter-option rumi=(get rumis index) color=(get colors (mod index 5)) click=(action "changePerspective" index)}}
+    {{/if}}
+  {{/each}}
+{{/if}}
+
+
+{{yield selectedRumi}}

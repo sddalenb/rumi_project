@@ -1,0 +1,30 @@
+// route: rumi-nav-bar
+
+.rumi-nav-bar {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid lightgrey;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: lightgrey;
+
+    i {
+      margin-bottom: 8px;
+    }
+
+    &.active {
+      color: black;
+    }
+  }
+}

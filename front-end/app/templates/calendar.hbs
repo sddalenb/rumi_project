@@ -1,0 +1,18 @@
+<div class="calendar-header">
+  <span style="margin: auto">Calendar</span>
+  {{rumi-filter rumis=rumiList colors=colors selectedRumi=selectedRumi}}
+</div>
+
+{{rumi-calendar
+  center=selectedMonth
+  selected=collection
+  rumiList=rumiList
+  monthTasks=monthTasks
+  onCenterChange=(action (mut selectedMonth) value="date")}}
+
+<div class="month-tasks">
+  <h3>{{moment-format selectedMonth "MMMM"}} Tasks</h3>
+  {{#each visibleTasks as |task|}}
+    {{rumi-task-card colors=colors rumiList=rumiList click=(action "viewTask" task) selectedRumi=selectedRumi task=task calendarView=true}}
+  {{/each}}
+</div>

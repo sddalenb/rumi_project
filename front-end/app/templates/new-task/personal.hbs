@@ -1,0 +1,26 @@
+<div class="personal-header">
+  Create a task for yourself
+</div>
+
+<div class="input-section">
+  {{input placeholder="Write a task name..." value=taskName}}
+</div>
+<div class="input-section">
+  {{textarea placeholder="Description..." rows=8 value=taskDescription}}
+</div>
+
+<div class="input-section">
+  {{input placeholder="Due date..." value=dueDate}}
+</div>
+
+<div class="input-section">
+  <select>
+    <option value='daily'>Daily</option>
+    <option value='weekly'>Weekly</option>
+    <option value='monthly'>Monthly</option>
+    <option value='yearly'>Yearly</option>
+    <option value='custom'>Custom</option>
+  </select>
+</div>
+
+{{#mdc-button click=(action "saveTask")}}Save{{/mdc-button}}

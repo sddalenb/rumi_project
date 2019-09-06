@@ -1,0 +1,27 @@
+// route: rumi-task-comment
+
+.rumi-task-comment {
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  .comment-avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .comment-container{
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: black;
+    font-family: Exo;
+    padding: 8px;
+    
+    .comment-user {
+      font-weight: bold;
+      margin-bottom: 8px;
+      width: 100%;
+    }
+  }
+
+}

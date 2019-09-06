@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:semibold');
+// route: new-task/household
+
+.route__new-task-household {
+  .new-task-content{
+    background: black;
+  }
+
+  .household-header {
+    text-align: center;
+    color: #F5F0F0;
+    font-family: 'Eczar', sans-serif;
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 24px 0;
+  }
+
+  .input-section{
+    &.yes{
+      :nth-child(2){
+        background: black;
+        color: #F5F0F0;
+      }
+      :last-child{
+        background: #F5F0F0;
+        color: black;
+      }
+    }
+
+    &.no{
+      :last-child{
+        background: black;
+        color: #F5F0F0;
+      }
+      :nth-child(2){
+        background: #F5F0F0;
+        color: black;
+      }
+    }
+  }
+
+  .prompt{
+    width: 100%;
+    padding: 16px 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}

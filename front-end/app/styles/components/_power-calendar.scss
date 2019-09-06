@@ -1,0 +1,156 @@
+.ember-power-calendar{
+
+  background: #f4f0ef;
+  margin-bottom: 10px;
+
+  .ember-power-calendar-day{
+    border: 1px solid black;
+    height: 200px;
+    font-family: "Exo", serif;
+    font-size: 10pt;
+    font-weight: lighter;
+    border-radius: 60%;
+    margin: 4px;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    &.ember-power-calendar-day--other-month{ // never show these
+      color: #f4f0ef;
+      border: 1px solid #f4f0ef;
+      &.ember-power-calendar-day--selected{
+        color: #f4f0ef;
+        border: 1px solid #f4f0ef;
+      }
+    }
+    &.ember-power-calendar-day--current-month{
+      &.ember-power-calendar-day--selected{
+        background: black;
+        color: white;
+      }
+    }
+
+    span {
+      border-radius: 60%;
+      border: 1px solid black;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+      &.rumi-0{
+        background: #00F0BA;
+        color: white;
+      }
+      &.rumi-1{
+        background: #FF3333;
+        color: white;
+      }
+      &.rumi-2{
+        background: #F7E829;
+        color: white;
+      }
+      &.rumi-3{
+        background: #29367D;
+        color: white;
+      }
+      &.rumi-4{
+        background: #70ff38;
+        color: white;
+      }
+
+      /* position classes */
+      &.notification-pos-0{
+        right: 8px;
+        z-index: 5;
+      }
+      &.notification-pos-1{
+        right: 4px;
+        z-index: 4;
+      }
+      &.notification-pos-2{
+        right: 0px;
+        z-index: 3;
+      }
+      &.notification-pos-3{
+        right: -4px;
+        z-index: 2;
+      }
+      &.notification-pos-4{
+        right: -8px;
+        z-index: 1;
+      }
+    }
+
+  }
+
+  .ember-power-calendar-weekdays{
+    height: 50px;
+  }
+
+  .ember-power-calendar-weekday{
+    font-family: "Exo", serif;
+    font-weight: bold;
+  }
+
+  .ember-power-calendar-nav{
+
+    background-color: black;
+    height: 100px;
+
+    .ember-power-calendar-nav-control{
+      color: #00f0bb;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 30pt;
+
+      &:hover{
+        cursor: pointer;
+      }
+
+    }
+
+    .ember-power-calendar-nav-title{
+      color: #f4f0ef;
+      font-family: "Exo", serif;
+      font-weight: bold;
+      font-size: 20pt;
+      padding-top: 25px;
+    }
+
+  }
+
+  /* Mobile CSS */
+  @media only screen and (max-width: 450px) {
+
+    .ember-power-calendar-day{
+      border: 1px solid black;
+      height: 45px;
+      width: 39px;
+      height: 39px;
+      font-size: 14px;
+    }
+
+    .ember-power-calendar-nav{
+
+      height: 50px;
+
+      .ember-power-calendar-nav-control{
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 14pt;
+      }
+
+      .ember-power-calendar-nav-title{
+        font-size: 14pt;
+        padding-top: 7px;
+      }
+
+    }
+
+    .ember-power-calendar-weekdays{
+      height: 30px;
+    }
+
+  }
+
+}

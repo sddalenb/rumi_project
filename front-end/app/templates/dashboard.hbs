@@ -1,0 +1,21 @@
+<div class="dash-header">
+  <div class="bar-container">
+    {{rumi-progress-bar progress=progress}}
+    <span class="progress-type">Daily Progress</span>
+  </div>
+  <h3>Task Board</h3>
+</div>
+
+{{rumi-task-group
+  groupOpen=yourTasksOpen
+  otherOpen=groupTasksOpen
+  completed=completedTasks
+  upcoming=upcomingTasks
+  groupName="Your Tasks"}}
+
+{{rumi-task-group
+  groupOpen=groupTasksOpen
+  otherOpen=yourTasksOpen 
+  completed=completedHouseTasks
+  upcoming=upcomingHouseTasks
+  groupName="Household Tasks"}}

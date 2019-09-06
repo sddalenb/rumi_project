@@ -1,0 +1,52 @@
+<div class="polls-header">
+  Polls
+</div>
+
+<div class="claim-explain-section">
+  <h3>Claim or explain</h3>
+  {{#each claims as |claim|}}
+    {{#unless claim.answered}}
+      {{rumi-poll-card display=claim click=(action "openClaimDialog" claim)}}
+    {{/unless}}
+  {{/each}}
+</div>
+
+<div class="polls-section">
+  <h3>Ready for vote</h3>
+
+  {{#each polls as |poll|}}
+    {{rumi-poll-card readyToVote=true display=poll click=(action "openVoteDialog" poll)}}
+  {{/each}}
+</div>
+
+{{rumi-poll-dialog
+  displayTask=displayTask
+  title=displayTask.task.title
+  acceptButtonText="Accept"
+  closeButtonText="Decline"
+  scrollable=true
+  claim=true
+  accept=(action "willTakeTask" displayTask)
+  close=(action "rejectTask" displayTask)
+  show=claimDialogOpen}}
+
+  {{rumi-poll-dialog
+    displayTask=displayTask
+    title="Please state your excuse"
+    acceptButtonText="Submit"
+    closeButtonText="Cancel"
+    scrollable=true
+    refuseDialog=true
+    excuse=excuse
+    accept=(action "confirmReject" displayTask excuse)
+    show=refuseDialogOpen}}
+
+{{rumi-poll-dialog
+  title="Who has the worst excuse?"
+  excuses=excuses
+  acceptButtonText="Submit"
+  closeButtonText="Cancel"
+  scrollable=true
+  votingDialog=true
+  user=session.currentUser.id
+  show=voteDialogOpen}}

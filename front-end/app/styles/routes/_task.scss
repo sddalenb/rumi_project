@@ -1,0 +1,48 @@
+// route: task
+
+.route__task {
+  .task-content{
+    height: -webkit-fill-available;
+    padding: 16px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  h3 {
+    color: white;
+    text-align:center;
+    font-family: Eczar;
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  .description{
+    border: 1px solid grey;
+    padding: 16px;
+    margin-bottom: 16px;
+    &.task{
+      min-height: 160px;
+    }
+    background: white;
+    color: black;
+    font-family: Exo;
+  }
+
+  .description p {
+    margin: 0;
+  }
+
+  .text-field-row {
+    padding: 8px 0;
+  }
+
+  .mdc-text-field{
+    width: 100%;
+    border-radius: 0px;
+    font-family: Exo;
+  }
+
+}

@@ -1,0 +1,7 @@
+{{#mdc-form submit=(action "signIn") as |form|}}
+  {{input type="text" id="user" value=username required=true}}<br>
+  {{input type="password" id="pass" value=password required=true}}
+
+  <button type="submit" disabled={{form.isInvalid}}>Sign in</button><br>
+  {{#mdc-button-linkto "sign-in" type="submit"}}Create Account{{/mdc-button-linkto}}
+{{/mdc-form}}

@@ -1,0 +1,29 @@
+{{#mdc-dialog
+  title=title
+  acceptButtonText=acceptButtonText
+  closeButtonText=closeButtonText
+  scrollable=scrollable
+  accept=accept
+  close=close
+  show=show}}
+  {{#if claim}}
+    <div class="container description">
+      {{displayTask.task.description}}
+    </div>
+    <div class="container">
+      {{moment-format displayTask.task.dateDue "MM/DD/YYYY"}}
+    </div>
+
+    Can you do this task?
+  {{else if refuseDialog}}
+    {{textarea placeholder="Reason goes here..." rows=4 value=excuse}}
+
+  {{else}}
+    {{#each excuses as |excuse|}}
+      {{#unless (eq user excuse.user.id)}}
+        {{rumi-vote-card claim=excuse}}
+      {{/unless}}
+    {{/each}}
+  {{/if}}
+
+{{/mdc-dialog}}

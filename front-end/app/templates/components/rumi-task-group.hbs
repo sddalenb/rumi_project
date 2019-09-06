@@ -1,0 +1,28 @@
+{{#mdc-card-media}}
+  {{#mdc-card-media-content class=groupStatus}}
+    <div class="icon-area">
+      {{#if groupOpen}}
+        {{mdc-icon-button "expand_less" click=(action (mut groupOpen) false)}}
+      {{else}}
+        {{mdc-icon-button "expand_more" click=(action "openGroup")}}
+      {{/if}}
+    </div>
+    {{groupName}}
+  {{/mdc-card-media-content}}
+{{/mdc-card-media}}
+
+{{#liquid-if groupOpen use="crossFade"}}
+  <div class="task-list">
+    {{#each upcoming as |task|}}
+      {{rumi-task-card task=task click=(action "viewTask" task)}}
+    {{/each}}
+
+    <div class="break">
+      <div class="left">Completed Tasks</div>
+      <div class="line"></div>
+    </div>
+    {{#each completed as |task|}}
+      {{rumi-task-card task=task click=(action "viewTask" task)}}
+    {{/each}}
+  </div>
+{{/liquid-if}}

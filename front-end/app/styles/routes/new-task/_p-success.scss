@@ -1,0 +1,32 @@
+// route: new-task/p-success
+
+.route__new-task-p-success {
+  .child-section{
+    background: #F5F0F0;
+    text-align: center;
+    font-family: Exo;
+    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .material-icons{
+    font-size: 200px;
+  }
+
+  .message{
+    margin-top: 10%;
+    margin-bottom: 35%;
+  }
+
+  .mdc-button{
+    color: #F5F0F0;
+    background: black;
+    width: 68px;
+    height: 25px;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
+}

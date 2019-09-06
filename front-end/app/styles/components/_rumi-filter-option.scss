@@ -1,0 +1,17 @@
+// route: rumi-filter-option
+
+.rumi-filter-option {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  min-width: 83px;
+  margin-bottom: 4px;
+  .circle{
+    border-radius: 60%;
+    border: 1px solid white;
+    margin: auto 8px;
+    width: 9px;
+    height: 9px;
+  }
+}

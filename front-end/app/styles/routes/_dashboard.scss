@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Exo|Eczar');
+// route: dashboard
+
+.route__dashboard {
+  .bar-container{
+    margin: 0 auto;
+  }
+
+  .progress-type{
+    font-family: 'Exo', sans-serif;
+    font-size: 11px;
+    color: #00F0BA;
+  }
+  
+  .dash-header h3{
+    font-family: 'Eczar', sans-serif;
+    font-size: 22pt;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 2px;
+  }
+  .add-task{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .rumi-task-card + .rumi-task-card {
+    border-top: 1px solid lightgrey;
+  }
+}
